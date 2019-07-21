@@ -35,9 +35,10 @@ def pig_latin():
 @app.route('/')
 def home():
 
+    text = str(get_fact())
     the_link = str(pig_latin())
 
-    return render_template('base.jinja2', url=the_link)
+    return render_template('base.jinja2', url=the_link, text=text)
 
 
 if __name__ == "__main__":
